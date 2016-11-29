@@ -28,10 +28,19 @@ while (<>)
         if(!/#/)
         {
                 #print "SwiftServe DA found!\n";
-		my @temprow = split / /, $_;
-		print "@temprow";
-		push(@region_entry,$_);
-		$num_region_entry++;
+			my @temp_row = split / /, $_;
+			#print "@temp_row";
+			#print "0 is: @temp_row[0]"." and "."1 is: @temp_row[1]\n" ;
+			for(my $i=0;$i<3;$i++)
+			{
+				for(my $j=0;$j<2;$j++)
+				{
+					$region_entry[$i][$j]=@temp_row[$j];
+				}
+			}
+		
+		#push(@region_entry,$_);
+		#$num_region_entry++;
 
 		#print "$_[0] and some text $_[1]";
 
@@ -41,5 +50,6 @@ while (<>)
                 #print "No DA found!\n";
         }
 }
-#print "@region_entry";
+print "@$_\n" for @region_entry;
+#print "@region_entry[0][0]";
 #print "$num_region_entry";
