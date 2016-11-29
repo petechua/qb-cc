@@ -1,6 +1,6 @@
 # Region P
 # Device-ID IP-Address
-B2C38C2 122.2.223.10
+B2C38C2 192.168.223.10
 x petite
 j big
 c medium
